@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Contoh Dasar CSS Grid</title>
+  <style>
+    /* Container grid utama */
+    .grid-container {
+      display: grid; /* Aktifkan grid layout */
+      
+      /* Buat 3 kolom masing-masing lebar 1fr (bagian sama besar) */
+      grid-template-columns: 2fr 2fr;
+      
+      gap: 10px; /* Jarak antar kolom dan baris */
+      
+      background-color: #f0f0f0; /* Warna latar belakang container */
+      padding: 20px; /* Ruang dalam container */
+    }
+
+    /* Item di dalam grid */
+    .grid-item {
+      background-color: steelblue; /* Warna latar item */
+      color: white; /* Warna teks */
+      padding: 20px; /* Ruang dalam item */
+      text-align: center; /* Teks rata tengah */
+      font-size: 20px; /* Ukuran teks */
+      border-radius: 8px; /* Sudut melengkung */
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Elemen grid utama -->
+  <div class="grid-container">
+    <!-- Setiap div ini adalah item grid -->
+    <div class="grid-item">Item 1</div>
+    <div class="grid-item">Item 2</div>
+    <div class="grid-item">Item 3</div>
+    <div class="grid-item">Item 4</div>
+    <div class="grid-item">Item 5</div>
+    <div class="grid-item">Item 6</div>
+  </div>
+
+</body>
+</html>
