@@ -6,7 +6,57 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>Hallo ini pertama aku coba github ok 
-    </h1>
+    <style>
+        *{
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body{
+            display: flex;
+            justify-content: center;
+        }
+
+        nav{
+        border: 2px solid rgb(35, 190, 35);
+        background-color: rgb(35, 190, 35);
+        padding: 10px; 
+        position: fixed;
+        width: 100%;
+        z-index: 1000;
+        justify-content: center;
+    }
+    
+
+    .gasi{
+        display: flex;
+        list-style: none;
+        gap: 20px;
+        justify-content: center;
+    }
+    .gasi a{
+        color: aqua;
+        display: inline-block;
+        font-weight: bold;
+        text-decoration: none;
+    }
+    .gasi a:hover{
+        color: white;
+        transform: scale(2.05);
+    }
+
+    </style>
+  
+        <nav>
+            <ul class="gasi">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About us</a></li>
+                <li><a href="#">Contact</a></li>
+                <li><a href="#">More info</a></li>
+              
+            </ul>
+        </nav>
+
 </body>
 </html>

@@ -1,0 +1,41 @@
+<style>
+  /* Tombol utama dengan class .button-hover */
+  .button-hover {
+    position: relative; /* Penting agar ::before bisa diposisikan relatif terhadap elemen ini */
+    display: inline-block; /* Agar ukuran tombol menyesuaikan kontennya */
+    padding: 10px 20px; /* Spasi dalam tombol */
+    color: white; /* Warna teks */
+    background-color: transparent; /* Awalnya transparan, warna hanya muncul saat hover */
+    border: 2px solid #3498db; /* Garis tepi warna biru */
+    overflow: hidden; /* Agar elemen ::before yang akan bergerak tidak keluar dari batas tombol */
+    cursor: pointer; /* Kursor menjadi tangan saat hover */
+    z-index: 1; /* Z-index ini penting agar teks berada di atas lapisan ::before */
+  }
+  
+  /* Pseudo-element ::before yang akan menjadi "lapisan warna isi" */
+  .button-hover::before {
+    content: ""; /* Harus diisi agar pseudo-element muncul */
+    position: absolute; /* Agar bisa diatur posisinya secara bebas di dalam tombol */
+    left: 0; /* Mulai dari kiri */
+    top: 0; /* Mulai dari atas */
+    height: 100%; /* Menutupi seluruh tinggi tombol */
+    width: 0; /* Awalnya tidak terlihat (akan bertambah lebar saat hover) */
+    background-color: #3498db; /* Warna yang akan mengisi tombol */
+    z-index: -1; /* Supaya berada DI BAWAH teks tombol */
+    transition: width 0.4s ease; /* Efek transisi saat lebar berubah */
+  }
+  
+  /* Ketika tombol di-hover, perluas lebar lapisan ::before */
+  .button-hover:hover::before {
+    width: 100%; /* Warna biru mengisi seluruh tombol dari kiri ke kanan */
+  }
+  
+  /* Tambahan: ubah warna teks agar tetap kontras saat hover */
+  .button-hover:hover {
+    color: white; /* Pastikan teks tetap putih, karena latar jadi biru */
+  }
+  </style>
+  
+  <!-- Tombol HTML -->
+  <button class="button-hover">Hover Saya</button>
+  
