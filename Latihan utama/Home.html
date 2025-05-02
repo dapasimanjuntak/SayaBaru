@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web pertama</title>
+    <style>     
+    *{
+        box-sizing: border-box;
+        padding: 0;
+        margin: 0;
+    }
+
+    body{
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    }
+
+    nav{
+        border: 2px solid green;
+        background-color: aliceblue;
+        padding: 10px; 
+        position: fixed;
+        width: 100%;
+        z-index: 1000;
+        justify-content: center;
+    }
+    
+
+    .Coba{
+        display: flex;
+        list-style: none;
+        gap: 20px;
+        justify-content: center;
+    }
+    .Coba a{
+        color: aqua;
+        display: inline-block;
+        font-weight: bold;
+        text-decoration: none;
+    }
+    .Coba a:hover{
+        color: white;
+        background-color: red;
+    }
+
+    .scrol{
+        border: 2px solid black;
+        width: auto;
+        height: 100px;
+    }
+
+    .warp{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        gap:20px;
+        padding: 50px;
+        max-width: 600px;
+        margin: 100px auto;
+    }
+
+    .warp div{
+            width: 150px;
+            height: 100px;
+            background-color: lightblue;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 10px;
+            font-weight: bold;
+            font-size: 18px;
+    }
+
+    .masukan{
+        display: flex;
+        color: blue;
+        font: bold;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        margin: 100px auto;
+        padding: 100px;
+        border: 3px solid;
+        width: fit-content;
+        height: 100px;
+    }
+    
+    .masukan form { /*sorort form untuk merubah penempatan button*/
+    display: flex;
+    flex-direction: column; /*untuk membuatnya menjadi vertikal tanpa ini akan jadi seperti ini [Nama Anda: ________][    Submit Button    ]*/
+    align-items: center;
+    gap: 10px;
+}
+    .masukan button{
+        background-color: blue;
+        color: white;
+        width: auto;
+        height: auto;
+        margin: 20px;
+        padding: 20px;
+    }
+
+    .masukan button:hover{
+        background-color: aliceblue;
+        color: blue;
+    }
+    
+    .keluar{
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        padding: 50px;
+        margin: 100px auto;
+        max-width: 500px;
+        border: 2px solid black;
+        width: auto;
+        height: 300px;
+        text-align: center;
+        flex-direction: column;/* buat vertikal */
+    }
+    #your{
+        color: blue;
+    }
+    #nomer{
+        color: brown;
+    }
+
+    .tempat-kartu{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 50px;
+        padding: 50px;
+        margin: 100px auto;
+        max-width: 800px;
+    }
+
+    .kartu{
+        width: 200px;
+        border: 1px solid #989898;
+        border-radius: 10px;
+        text-align: center;
+        padding: 15px;
+        background-color: #ff6e6e;
+        transition: transform 0.2s;
+    }
+
+    .kartu {
+    box-shadow: 0 0 10px rgba(255, 0, 0, 0.3), 
+                0 0 20px rgba(255, 165, 0, 0.2); /* efek api merah-oranye */
+}
+
+.kartu:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px rgba(255, 0, 0, 0.5),
+                0 0 30px rgba(255, 165, 0, 0.4);
+}
+
+    
+
+    
+    </style>
+</head>
+<body>
+    <nav>
+        <ul class="Coba">
+            <li> <a href="#">Home</a></li>
+            <li> <a href="#">About</a></li>
+            <li> <a href="#">Contact Us </a></li>
+        </ul>
+    </nav>
+
+    <section class="scrol">
+        <div>
+            <p>Scroll</p>
+        </div>
+    </section>
+
+    <section class="warp">
+        <div>Kadal</div>
+        <div>Gajah</div>
+        <div>Elang</div>
+        <div>Harimau</div>
+        <div>ayam</div>
+        <div>Kucing</div>
+    </section>
+
+    <section class="masukan">
+        <div>
+            <form id="homeJava" action="">
+                <p>Nama anda: <input type="text" id="nama" placeholder="Masukan Nama"></p>  
+                <p>Umur Anda: <input type="text" id="umur" placeholder="Masukan Nama"></p>  
+                <button type="submit">Submit</button>              
+            </form>
+        </div>
+    </section>
+
+    <section class="keluar">
+        <h1>output anda</h1>
+        <h1 id="your"></h1>
+        <h1 id="nomer"></h1>
+    </section>
+
+    <section class="tempat-kartu">
+        <div class="kartu">
+            <img src="https://via.placeholder.com/150" alt="Foto 1">
+            <h3>Dapa</h3>
+            <p>Baik dan Tampan.</p>
+        </div>
+        <div class="kartu">
+            <img src="https://via.placeholder.com/150" alt="Foto 1">
+            <h3>Gibrae;</h3>
+            <p>Jawa Brisik.</p>
+        </div>
+        <div class="kartu">
+            <img src="https://via.placeholder.com/150" alt="Foto 1">
+            <h3>Piter</h3>
+            <p>Ganteng Ganteng Heang</p>
+        </div>
+        <div class="kartu">
+            <img src="https://via.placeholder.com/150" alt="Foto 1">
+            <h3>Boy</h3>
+            <p>Cerdik ASW</p>
+        </div>
+        <div class="kartu">
+            <img src="https://via.placeholder.com/150" alt="Foto 1">
+            <h3>Jeremy</h3>
+            <p>Gacor Bos</p>
+        </div>
+        <div class="kartu">
+            <img src="https://via.placeholder.com/150" alt="Foto 1">
+            <h3>Abet</h3>
+            <p>Bukan Orang njir</p>
+        </div>
+    </section>
+
+
+
+
+
+
+
+
+
+    <script>
+        document.getElementById("homeJava").addEventListener("submit", function(e){
+            e.preventDefault();
+
+            let satir = document.getElementById("nama").value;
+            let angka = parseInt(document.getElementById("umur").value);
+
+            document.getElementById("your").innerText = "halo " + satir;
+
+            if(angka < 20){
+                document.getElementById("nomer").innerText= "Umur mu " + angka + " kamu masih remaja";
+            } else if(angka >= 20 && angka <= 30){
+                document.getElementById("nomer").innerText= "Umur mu " + angka + " kamu sudah lumayan dewasa";
+            } else if(angka >= 30 && angka <= 50){
+                document.getElementById("nomer").innerText= "Umur mu " + angka + " kamu sudah dewasa";
+            } else if(angka >= 50 && angka <= 80){
+                document.getElementById("nomer").innerText= "Umur mu " + angka + " kamu sudah tua";
+            } else{
+                document.getElementById("nomer").innerText= "Umur mu " + angka + " Waduh Fosil Bergerak";
+            } 
+
+
+        });
+    </script>
+</body>
+</html>

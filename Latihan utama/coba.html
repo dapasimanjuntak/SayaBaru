@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Cek Nilai Ujian</title>
+</head>
+<body>
+  <h2>Form Cek Nilai Ujian</h2>
+
+  <!-- Input untuk nilai ujian -->
+  <form id="formNilai">
+    <input type="text" id="nama" placeholder="Masukan Nama Anda">
+    <input type="number" id="nilai" placeholder="Masukkan nilai ujian kamu">
+    <button type="submit">Cek Nilai</button>
+  </form>
+
+  <!-- Tempat untuk menampilkan hasil -->
+   <p id="namaPelajar"></p>
+  <p id="hasil"></p>
+  <p id="infoEvent"></p>
+
+
+    <script>
+      document.getElementById("formNilai").addEventListener("submit", function(e) {
+      e.preventDefault();
+
+      let nilai = parseInt(document.getElementById("nilai").value);
+      let nama = document.getElementById("nama").value;
+
+      /*disini (namaPelajar) dari id P atau tempat pengeluaran ouput nya dari form dnegan id nama*/
+      document.getElementById("namaPelajar").innerText = " Halo " + nama;
+
+      if(nilai < 60){
+        document.getElementById("hasil").innerText = "Kamu Kurang usaha saja tetap semangat";
+      }else if(nilai >= 60 && nilai <= 80){
+        document.getElementById("hasil").innerText = "Kamu Lulus";
+      }else if(nilai >= 80 && nilai <= 95) {
+        document.getElementById("hasil").innerText = "kamu Hebat";
+      }else{
+        document.getElementById("hasil").innerText = "Kamu Sangat Hebat";
+      }
+
+      document.getElementById("infoEvent").innerText =   "Tipe event: " + e.type + ", Elemen yang memicu: " + e.target.tagName;
+      });
+
+     
+    </script>
+  
+  </body>
+  </html>

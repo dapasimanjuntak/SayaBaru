@@ -1,0 +1,43 @@
+.container {
+        background-color: lightgray;
+        display: flex;
+        height: 300px;
+      
+        /* 🧪 Flex Direction */
+        /* flex-direction: row; */       /* Default: sejajar ke samping */
+        /* flex-direction: column; */    /* Sejajar ke bawah */
+        /* flex-direction: row-reverse; */
+        /* flex-direction: column-reverse; */
+      
+        /* 🧪 Justify Content (posisi di sepanjang sumbu utama: horizontal jika row) */
+        /* justify-content: flex-start; */   /* Default: mulai dari kiri */
+        /* justify-content: center; */
+        /* justify-content: flex-end; */
+        /* justify-content: space-between; */
+        /* justify-content: space-around; */
+        /* justify-content: space-evenly; */
+      
+        /* 🧪 Align Items (posisi di sepanjang sumbu silang: vertikal jika row) */
+        /* align-items: stretch; */     /* Default: mengisi tinggi kontainer */
+        /* align-items: flex-start; /*
+        /* align-items: center; */
+        /* align-items: flex-end; */
+        /* align-items: baseline; */
+
+        flex-direction: row;
+        justify-content: center ; 
+        align-items: center;
+}
+      
+  
+  
+  .box {
+    width: 100px;
+    height: 100px; 
+    background-color: darkgreen;
+    color: white;
+    margin: 10px;
+    text-align: center;
+    line-height: 100px;
+  }
+  

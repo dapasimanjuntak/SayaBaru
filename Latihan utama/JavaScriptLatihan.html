@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Latihan</title>
+    <style>
+        #tars{
+            text-align: center;
+            font-family: 'Times New Roman', Times, serif;
+            border: solid 5px black;
+            border-radius: 10px;
+            display: flex;
+            justify-content: center;
+            align-items:flex-end;
+            border-style: dashed;
+        }
+    </style>
+</head>
+<body>
+    <section id="tars">
+        <div class="java">
+            <h1>BELAJAR JAVA SCRIPT</h1>
+            <p id="namaPelajar">
+            <p id="pesan"></p>
+            <p id="panjang"></p>
+        </div>
+    </section>
+    <section>
+        
+        <form id="JavaForm" action="">
+          <p>Nama<input type="text" id="anama" placeholder="masukan nama"></p>
+            <button type="submit">Buat</button>
+        </form>
+    </section>
+    <script>
+        document.getElementById("JavaForm").addEventListener("submit", function(e) {
+            e.preventDefault();
+
+           let nama = document.getElementById("anama").value;
+           let 
+
+           document.getElementById("namaPelajar").innerText= "halo " +  nama;
+        });
+  function perkenalan(Dapa) {
+  let pesan = "Halo, nama saya " + Dapa;
+  let panjangNama = Dapa.length;
+
+  console.log(pesan);
+  console.log("Jumlah huruf di namamu adalah: " + panjangNama);
+  document.getElementById("pesan").innerText = pesan;
+  document.getElementById("panjang").innerText = "jumlah huruf: " + panjangNama;
+}
+
+perkenalan("Dapa");
+
+    </script>
+</body>
+</html>
